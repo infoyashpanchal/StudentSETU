@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js">
+<head>
+	<title>Student SETU | Loading</title>
+
+	<link rel="stylesheet" href="{% static '/css/css_loading1/normalize.css' %}">
+	<link rel="stylesheet" href="{% static '/css/css_loading1/main.css' %}">
+	<script src="{% static '/js/js_loading1/vendor/modernizr-2.6.2.min.js' %}"></script>
+
+</head>
+<body class="demo">
+
+	<div id="demo-content">
+		<!--Loading Animation-->
+		<div id="loader-wrapper">
+			<div id="loader"></div>
+
+			<div class="loader-section section-left"></div>
+            <div class="loader-section section-right"></div>
+		</div> 
+
+		<!-- buttons -->
+		<div">
+			<a href="{% url 'loading_page2' %}"><button type="button" class="big-button">Student</button></a>
+			<a href="{% url 'loading_page2' %}"><button type="button" class="big-button">Teacher</button></a>
+		</div>
+	</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="{% static "/js/js_loading1/vendor/jquery-1.9.1.min.js" %}"><\/script>')</script>
+	<script src="{% static '/js/js_loading1/main.js' %}"></script>
+
+</body>
+</html>

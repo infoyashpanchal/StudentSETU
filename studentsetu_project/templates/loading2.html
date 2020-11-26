@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html class="no-js">
+<head>
+	<title>Student SETU | Loading</title>
+
+	<link rel="stylesheet" href="{% static '/css/css_loading2/normalize.css' %}">
+	<link rel="stylesheet" href="{% static '/css/css_loading2/main.css' %}">
+<!--<script src="js/vendor/modernizr-2.6.2.min.js"></script>
+-->
+</head>
+		<div>
+			{% if var %}
+				<h2>Registeration done!</h2>
+			{% endif %}
+		</div>
+		
+		<!-- buttons -->
+		<div>
+			<a href="{% url 'register_page' %}"><button type="button" class="big-button">Register</button></a>
+			<a href="{% url 'login_page' %}"><button type="button" class="big-button">Login</button></a>
+		</div>
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<!--<script src="js/main.js"></script>
+-->
+</body>
+</html>
