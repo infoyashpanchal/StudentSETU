@@ -33,11 +33,11 @@ def register_page(request):
     return render(request, 'register.html')
 
 def login_page(request):
-    con = mysql.connector.connect(host = '127.0.0.1', user = 'root', password = 'root', database = 'studentsetu')
+    con = mysql.connector.connect(host = '127.0.0.1', user = 'yash', password = 'yash123', database = 'studentsetu')
     cursor = con.cursor()
-    con2 = mysql.connector.connect(host = '127.0.0.1', user = 'root', password = 'root', database = 'studentsetu')
+    con2 = mysql.connector.connect(host = '127.0.0.1', user = 'yash', password = 'yash123', database = 'studentsetu')
     cursor2 = con2.cursor()
-    con3 = mysql.connector.connect(host = '127.0.0.1', user = 'root', password = 'root', database = 'studentsetu')
+    con3 = mysql.connector.connect(host = '127.0.0.1', user = 'yash', password = 'yash123', database = 'studentsetu')
     cursor3 = con3.cursor()
     sql = "select email from studentsetu_app_user;"
     sql2 = "select password from studentsetu_app_user;"
