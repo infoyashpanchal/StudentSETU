@@ -1,0 +1,101 @@
+{% extends 'index.html' %}
+
+{% load static %}
+
+{% block title %}StudentSETU | Login{% endblock %}
+
+{% block content %}
+
+<h1 style="display: block;text-align: center;">Create New Account!</h1>
+{% for msg in messages %}
+	<div class="alert alert-danger" role="alert">
+		{{msg}}
+	</div>
+{% endfor %}
+
+<!--Registeration Form-->
+<form method="POST" action="{% url 'register' %}" style="margin-top: 5%; margin-left: 25%; margin-right: 15%;">
+	{% csrf_token %}
+	<!--======================First Row - NAME==============================-->
+	
+	<div class="form-row">
+		<div class="col-md-4 mb-3">
+			<label for="validationDefault01">First name</label>
+			<input type="text" class="form-control" name="fname" required>
+		</div>
+		<div class="col-md-4 mb-3">
+			<label for="validationDefault02">Last name</label>
+			<input type="text" class="form-control" name="lname" required>
+		</div>
+	</div>
+	<!--======================Second Row - CLASS DETAILS==============================-->
+<!--
+	<div class="form-row">
+		<div class="col-md-4 mb-3">
+			<label for="validationDefault04">Department</label>
+			<select class="custom-select" name="department" required>
+				<option selected disabled value="">Branch</option>
+				<option>Computer</option>
+				<option>Information Technology</option>
+				<option>Civil</option>
+				<option>EXTC</option>
+				<option>ETRX</option>
+				<option>AI</option>
+			</select>
+		</div>
+		<div class="col-md-3 mb-3">
+			<label for="validationDefault04">Class</label>
+			<select class="custom-select" name="Class" required>
+				<option selected disabled value="">Semester</option>
+				<option>I</option>
+				<option>II</option>
+				<option>III</option>
+				<option>IV</option>
+				<option>V</option>
+				<option>VI</option>
+				<option>VII</option>
+				<option>VIII</option>
+			</select>
+		</div>
+		<div class="col-md-3 mb-3">
+			<label for="validationDefault04">Gender</label>
+			<select class="custom-select" name="gender" required>
+				<option selected disabled value="">Gender</option>
+				<option>Male</option>
+				<option>Female</option>
+				<option>Transgender</option>
+			</select>
+		</div>
+	</div>
+	-->
+	<!--======================Third Row - EMAIL==============================-->
+	<div class="form-row">
+		<div class="col-md-10 mb-3">
+			<label for="validationDefault01">Email</label>
+			<input type="email" class="form-control" name="email" placeholder="name@domain.com" required>
+		</div>
+	</div>
+	<!--======================Fourth Row - PASSWORD==============================-->
+	<div class="form-row">
+		<div class="col-md-5 mb-3">
+			<label for="validationDefault01">Password</label>
+			<input type="password" class="form-control" name="password" placeholder="Password" required>
+		</div>
+		<div class="col-md-5 mb-3">
+			<label for="validationDefault02">Confirm Password</label>
+			<input type="password" class="form-control" name="re_password" placeholder="Re-Enter your Password" required>
+		</div>
+	</div>
+	<!--======================Fifth Row - SUBMIT==============================-->
+	<div class="form-group">
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" name="agree" required>
+			<label class="form-check-label" for="invalidCheck2">
+				I hereby declare that the above given details by me are True.
+			</label>
+		</div>
+	</div>
+	<button class="btn btn-primary" type="submit">Register</button>
+</form>
+
+{% endblock %}
